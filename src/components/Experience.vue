@@ -122,7 +122,7 @@ export default {
   top: 20px;
   left: -30px;
   width: 1px;
-  height: calc(100% + 20px);
+  height: calc(100% + 18px);
   background: gray;
   margin-left: 1rem;
 }
