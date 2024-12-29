@@ -100,9 +100,6 @@ const scrollToSection = (section) => {
 </script>
 
 <script>
-import image from "/robot.png";
-import Chat from './components/Chat.vue';
-
 export default {
   name: "RoundButton",
   data() {
