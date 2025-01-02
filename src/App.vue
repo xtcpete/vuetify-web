@@ -62,7 +62,7 @@
             @click="toggleTheme"
           >
             <v-icon>
-              {{ theme.global.current.dark ? 'mdi-weather-sunny' : 'mdi-weather-night' }}
+              {{ isDarkTheme ? 'mdi-weather-sunny' : 'mdi-weather-night' }}
             </v-icon>
           </v-btn>
         </v-col>
@@ -103,16 +103,18 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, computed } from 'vue';
 import { useTheme } from 'vuetify';
 import AppFooter from '@/components/AppFooter.vue';
 
 const drawer = ref(false);
 const theme = useTheme();
 
+// Add computed property for theme state
+const isDarkTheme = computed(() => theme.global.current.value.dark);
+
 const toggleTheme = () => {
-  theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark';
-  // Optionally save theme preference to localStorage
+  theme.global.name.value = isDarkTheme.value ? 'light' : 'dark';
   localStorage.setItem('theme', theme.global.name.value);
 };
 
@@ -150,3 +152,15 @@ export default {
   },
 };
 </script>
+
+<style>
+/* Add these styles at the bottom of your file */
+.v-application {
+  transition: background-color 0.3s ease-in-out !important;
+}
+
+.v-btn {
+  transition: color 0.3s ease-in-out !important;
+}
+
+</style>
