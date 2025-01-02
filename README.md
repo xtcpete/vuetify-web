@@ -23,6 +23,8 @@ A modern, responsive portfolio website template built with Vue 3 and Vuetify 3. 
 
 ## 🚀 Getting Started
 
+Install [Node.js](https://nodejs.org/en/) before starting.
+
 1. Fork the repository:
 
 ```bash
@@ -148,13 +150,6 @@ src/
 ├── assets/           # Static assets
 └── styles/           # Global styles
 ```
-
-## 📱 Responsive Design
-
-- Automatically adapts to different screen sizes
-- Mobile-friendly navigation drawer
-- Responsive grid layouts
-- Adaptive skill cloud
 
 ## 🚀 Deployment
 
