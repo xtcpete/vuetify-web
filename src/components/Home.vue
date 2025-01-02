@@ -2,7 +2,7 @@
 
       <v-sheet
         class="profile-container"
-        color="grey-lighten-4"
+        :color="theme.global.current.colors.background"
       >
       <v-row justify="center">
         <v-col cols="12" md="12">
@@ -21,7 +21,7 @@
                 <!-- Name -->
                 <h2 class="profile-name">Gonglin Chen</h2>
                 <!-- Social Links -->
-                <v-row justify="left" class="social-links mt-2">
+                <v-row justify="start" class="social-links mt-2">
                   <v-btn
                     icon
                     :href="$info_data.Links.LinkedIn"
@@ -58,7 +58,7 @@
                 </v-row> 
                 
                 <!-- Resume Button -->
-                <v-row justify="left" class="resume-btn mt-2">
+                <v-row justify="start" class="resume-btn mt-2">
                   <v-btn
                     class="mt-4 mx-2"
                     color="black"
@@ -116,6 +116,12 @@
         window.open("/resume.pdf", "_blank");
       },
     }
+  ,
+  computed: {
+    theme() {
+      return this.$vuetify.theme;
+    }
+  }
   }
 </script>
 
@@ -123,7 +129,7 @@
 .profile-container {
   padding: 20px;
   padding-bottom: 20px;
-  padding-top: 0;
+  padding-top: 20px;
 }
 
 .profile-card {

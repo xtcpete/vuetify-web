@@ -8,7 +8,7 @@ export const main = [
                 "Skills": "JavaScript, Web Development, Git",
                 "Title": "Web Developer Intern",
                 "imgPath": "static/imgs/jeeshow.png",
-                "Description": "Developed a web application for order management and payment processes for service workers."
+                "Description": "Developed a web application for order management and payment processing for service workers."
             },
             "1": {
                 "Comment": "Department of Land, Air, and Water Resources",
@@ -61,14 +61,14 @@ export const main = [
             "Contact": {
                 "Email": "gonglinc@usc.edu",
             },
-            "Highlight": "I am a first year Ph.D student @ USC's Vision & Graphics Lab (VGL) advised by Prof. Yajie Zhao. I am interested in 3D scene reconstruction, object detection. I also play with NLP.",
+            "Highlight": "I am a first-year Ph.D. student at USC's Vision & Graphics Lab (VGL), advised by Prof. Yajie Zhao. My research focuses on 3D scene reconstruction and object detection. I also work on Natural Language Processing (NLP).",
             "Links": {
                 "Github": "https://github.com/xtcpete",
                 "Instagram": "https://instagram.com/xtcpete?igshid=NTc4MTIwNjQ2YQ==",
                 "LinkedIn": "https://www.linkedin.com/in/xtcpetecgl"
             },
             "Name": "Gonglin Chen",
-            "keySkills": "Python,R,SQL,Spark,Pytorch,TensorFlow,Caffe,AWS,MongoDB,Machine Learning,Computer Vision,Feature Matching,3D Reconstruction,3D Vision"
+            "keySkills": "Python, R, SQL, Spark, PyTorch, TensorFlow, Caffe, AWS, MongoDB, Machine Learning, Computer Vision, Feature Matching, 3D Reconstruction, 3D Vision"
         }
     },
     {
@@ -97,7 +97,7 @@ export const main = [
             "1": {
                 "id": "https://colab.research.google.com/drive/1xCXzf0JK-kp-_p9uHIwX5VVdD4gLByon?usp=sharing",
                 "Demo": false,
-                "Description": "An exploration of L ottery Ticket Hypothesis on Yolov4",
+                "Description": "An exploration of the Lottery Ticket Hypothesis on YOLOv4",
                 "Skills": "Pytorch,Computer Vision,Deep Learning",
                 "Title": "Yolov4 Lottery Ticket Hypothesis"
             },

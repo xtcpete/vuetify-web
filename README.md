@@ -1,79 +1,181 @@
-# Vuetify (Default)
+# Vue Portfolio Template
 
-This is the official scaffolding tool for Vuetify, designed to give you a head start in building your new Vuetify application. It sets up a base template with all the necessary configurations and standard directory structure, enabling you to begin development without the hassle of setting up the project from scratch.
+A modern, responsive portfolio website template built with Vue 3 and Vuetify 3. Perfect for researchers, developers, and professionals looking to showcase their work.
 
-## ❗️ Important Links
+[Live Demo](https://xtcpete.com)
 
-- 📄 [Docs](https://vuetifyjs.com/)
-- 🚨 [Issues](https://issues.vuetifyjs.com/)
-- 🏬 [Store](https://store.vuetifyjs.com/)
-- 🎮 [Playground](https://play.vuetifyjs.com/)
-- 💬 [Discord](https://community.vuetifyjs.com)
+## 📋 To-Do List
 
-## 💿 Install
-
-Set up your project using your preferred package manager. Use the corresponding command to install the dependencies:
-
-| Package Manager                                                | Command        |
-|---------------------------------------------------------------|----------------|
-| [yarn](https://yarnpkg.com/getting-started)                   | `yarn install` |
-| [npm](https://docs.npmjs.com/cli/v7/commands/npm-install)     | `npm install`  |
-| [pnpm](https://pnpm.io/installation)                          | `pnpm install` |
-| [bun](https://bun.sh/#getting-started)                        | `bun install`  |
-
-After completing the installation, your environment is ready for Vuetify development.
+- [ ] Add loading animations
+- [ ] Improve accessibility features
+- [ ] Add more customization options for colors and themes
+- [ ] Add blog section template
 
 ## ✨ Features
 
-- 🖼️ **Optimized Front-End Stack**: Leverage the latest Vue 3 and Vuetify 3 for a modern, reactive UI development experience. [Vue 3](https://v3.vuejs.org/) | [Vuetify 3](https://vuetifyjs.com/en/)
-- 🗃️ **State Management**: Integrated with [Pinia](https://pinia.vuejs.org/), the intuitive, modular state management solution for Vue.
-- 🚦 **Routing and Layouts**: Utilizes Vue Router for SPA navigation and vite-plugin-vue-layouts for organizing Vue file layouts. [Vue Router](https://router.vuejs.org/) | [vite-plugin-vue-layouts](https://github.com/JohnCampionJr/vite-plugin-vue-layouts)
-- ⚡ **Next-Gen Tooling**: Powered by Vite, experience fast cold starts and instant HMR (Hot Module Replacement). [Vite](https://vitejs.dev/)
-- 🧩 **Automated Component Importing**: Streamline your workflow with unplugin-vue-components, automatically importing components as you use them. [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components)
+- 🎯 Clean, professional design
+- 📱 Fully responsive layout
+- 🔄 Interactive skill cloud
+- 📊 Publication showcase
+- ⏳ Experience timeline
+- 📊 Visitor count tracking
+- 🌓 Light/Dark mode support
 
-These features are curated to provide a seamless development experience from setup to deployment, ensuring that your Vuetify application is both powerful and maintainable.
+## 🚀 Getting Started
 
-## 💡 Usage
-
-This section covers how to start the development server and build your project for production.
-
-### Starting the Development Server
-
-To start the development server with hot-reload, run the following command. The server will be accessible at [http://localhost:3000](http://localhost:3000):
+1. Fork the repository:
 
 ```bash
-yarn dev
+git fork https://github.com/xtcpete/vuetify-web.git
+cd vuetify-web
 ```
 
-(Repeat for npm, pnpm, and bun with respective commands.)
-
-> Add NODE_OPTIONS='--no-warnings' to suppress the JSON import warnings that happen as part of the Vuetify import mapping. If you are on Node [v21.3.0](https://nodejs.org/en/blog/release/v21.3.0) or higher, you can change this to NODE_OPTIONS='--disable-warning=5401'. If you don't mind the warning, you can remove this from your package.json dev script.
-
-### Building for Production
-
-To build your project for production, use:
+2. Install dependencies:
 
 ```bash
-yarn build
+npm install
 ```
 
-(Repeat for npm, pnpm, and bun with respective commands.)
+3. Start development server:
 
-Once the build process is completed, your application will be ready for deployment in a production environment.
+```bash
+npm run dev
+```
 
-## 💪 Support Vuetify Development
+## 📝 Customization Guide
 
-This project is built with [Vuetify](https://vuetifyjs.com/en/), a UI Library with a comprehensive collection of Vue components. Vuetify is an MIT licensed Open Source project that has been made possible due to the generous contributions by our [sponsors and backers](https://vuetifyjs.com/introduction/sponsors-and-backers/). If you are interested in supporting this project, please consider:
+### 1. Update Personal Information
 
-- [Requesting Enterprise Support](https://support.vuetifyjs.com/)
-- [Sponsoring John on Github](https://github.com/users/johnleider/sponsorship)
-- [Sponsoring Kael on Github](https://github.com/users/kaelwd/sponsorship)
-- [Supporting the team on Open Collective](https://opencollective.com/vuetify)
-- [Becoming a sponsor on Patreon](https://www.patreon.com/vuetify)
-- [Becoming a subscriber on Tidelift](https://tidelift.com/subscription/npm/vuetify)
-- [Making a one-time donation with Paypal](https://paypal.me/vuetify)
+Edit `src/data/main.js`:
 
-## 📑 License
-[MIT](http://opensource.org/licenses/MIT)
+```javascript
+"Info": {
+    "Contact": {
+        "Email": "your.email@example.com",
+    },
+    "Highlight": "Your introduction here",
+    "Links": {
+        "Github": "your-github-url",
+        "Instagram": "your-instagram-url",
+        "LinkedIn": "your-linkedin-url"
+    },
+    "Name": "Your Name",
+    "keySkills": "Skill1, Skill2, Skill3" // These will appear in the skill cloud
+}
+```
 
-Copyright (c) 2016-present Vuetify, LLC
+### 2. Add Your Experiences
+
+In `src/data/main.js`, update the Experiences section:
+
+```javascript
+"Experiences": {
+    "0": {
+        "Company": "Company Name",
+        "Date": "Start - End Date",
+        "Location": "City, Country",
+        "Skills": "Skill1, Skill2, Skill3",
+        "Title": "Your Title",
+        "Description": "Description of your role and achievements",
+        "imgPath": "/company-logo.png", // Place images in public folder
+        "id": "company-website-url" // Optional, for clickable links
+    }
+}
+```
+
+### 3. Showcase Your Projects
+
+Add projects in `src/data/main.js`:
+
+```javascript
+"Projects": {
+    "0": {
+        "Demo": false, // Set true for featured projects, will apear on the top of the grid
+        "Description": "Project description",
+        "id": "project-url",
+        "Skills": "Skill1, Skill2, Skill3",
+        "Title": "Project Title"
+    }
+}
+```
+
+### 4. List Your Publications
+
+Add publications in `src/data/main.js`:
+
+```javascript
+"Publications": {
+    "0": {
+        "Authors": "Author1; Author2",
+        "Date": "2024",
+        "Title": "Publication Title",
+        "Abstract": "Publication abstract",
+        "Journal": "Journal Name",
+        "id": "publication-url",
+        "Cover": "/publication-cover.png"
+    }
+}
+```
+
+### 5. Update Images
+
+1. Place all images in the `public` folder
+2. Recommended image formats: PNG or JPG
+3. Update image paths in `main.js`
+4. Recommended sizes:
+   - Profile image: 400x400px
+   - Project covers: 800x400px
+
+### 6. Configure Visitor Counter
+
+In `src/components/AppFooter.vue`, update the visitor counter URL:
+
+```html
+<a href="https://hits.seeyoufarm.com">
+    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=YOUR_WEBSITE_URL"/>
+</a>
+```
+
+## 🛠️ Project Structure
+
+```
+src/
+├── components/       # Vue components
+├── data/             # Data files
+│   ├── main.js       # Main content
+│   └── details.js    # Additional details
+├── pages/            # Page components
+├── assets/           # Static assets
+└── styles/           # Global styles
+```
+
+## 📱 Responsive Design
+
+- Automatically adapts to different screen sizes
+- Mobile-friendly navigation drawer
+- Responsive grid layouts
+- Adaptive skill cloud
+
+## 🚀 Deployment
+
+1. Deploy this website on github pages:
+
+```bash
+npm run deploy
+```
+
+## 📄 License
+
+MIT License - Feel free to use this template for your portfolio!
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 💬 Support
+
+If you have any questions or need help customizing the template, please [open an issue](https://github.com/xtcpete/vuetify-web/issues).
+
+---
+
+If you find this template helpful, please give it a ⭐!

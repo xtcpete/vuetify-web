@@ -1,7 +1,7 @@
 <template>
     <v-sheet
         class="profile-container"
-        color="grey-lighten-4"
+        :color="theme.global.current.colors.background"
       >
 
       <v-card class="pub-card" elevation="2" style="padding-bottom: 48px;">
@@ -51,6 +51,9 @@ export default {
       return Object.keys(this.$publications_data)
         .sort((a, b) => b - a) // Sort keys in descending order
         .map((key) => this.$publications_data[key]); // Map keys to their values
+    },
+    theme() {
+      return this.$vuetify.theme;
     },
   },
 };

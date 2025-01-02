@@ -45,7 +45,6 @@ app.config.globalProperties.$detailsData = details
 app.config.globalProperties.$mainData = main
 // Register plugins and Vuetify
 registerPlugins(app)
-app.use(vuetify)
 
 // Mount the application
 app.mount('#app')

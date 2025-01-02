@@ -1,5 +1,8 @@
 <template>
-    <v-sheet class="profile-container" color="grey-lighten-4">
+    <v-sheet 
+        class="profile-container" 
+        :color="theme.global.current.colors.background"
+    >
       <v-row justify="center">
         <v-col cols="12" md="12">
           <v-card class="profile-card" elevation="2">
@@ -21,7 +24,7 @@
                                     :key="skillIndex"
                                     class="mt-3 mr-3 skill-chip"
                                     outlined
-                                    color="cyan lighten-2"
+                                    color="cyan-lighten-2"
                                     text-color="white"
                                     >
                                     {{ skill }}
@@ -51,15 +54,18 @@
 export default {
     data() {
         return {
-        snackbar: false, // Controls the visibility of the snackbar
+            snackbar: false, // Controls the visibility of the notification popup
         };
     },
     computed: {
         sortedExperiencesByKey() {
-        // Access the global data and sort by key in descending order
-        return Object.keys(this.$experiences_data)
-            .sort((a, b) => b - a) // Sort keys in descending order
-            .map((key) => this.$experiences_data[key]); // Map keys to their values
+            // Sort experiences in reverse chronological order (newest first)
+            return Object.keys(this.$experiences_data)
+                .sort((a, b) => b - a)
+                .map((key) => this.$experiences_data[key]);
+        },
+        theme() {
+            return this.$vuetify.theme;
         },
     },
     methods: {
@@ -154,7 +160,7 @@ export default {
 }
 
 .timeline-item:hover {
-  background-color: #e0f7fa; /* Light cyan background on hover */
+  background-color: v-bind('theme.global.current.dark ? "#111111" : "#e0f7fa"');
   transition: background-color 0.3s ease; /* Smooth transition effect */
   border-radius: 8px; /* Optional rounded corners */
 }

@@ -1,5 +1,5 @@
 <template>
-    <v-sheet class="profile-container" color="grey-lighten-4">
+    <v-sheet class="profile-container" :color="theme.global.current.colors.background">
       <v-row justify="center">
         <v-col cols="12" md="12">
           <v-card class="profile-card" elevation="2">
@@ -32,7 +32,7 @@
                                 :key="skillIndex"
                                 class="mt-3 mr-3 skill-chip"
                                 outlined
-                                color="cyan lighten-2"
+                                color="cyan-lighten-2"
                                 text-color="white"
                                 >
                                 {{ skill }}
@@ -59,17 +59,20 @@
 export default {
   data() {
     return {
-      showMore: false, // Toggles between showing more or less
-      maxVisibleProjects: 6, // 5 rows * 3 columns
-      isSmallScreen: window.innerWidth < 960, // Initial screen size detection
+      showMore: false, // Controls the expand/collapse state of projects list
+      maxVisibleProjects: 6, // Maximum number of projects to show initially
+      isSmallScreen: window.innerWidth < 960, // Responsive layout detection
     };
   },
   computed: {
     projects() {
-      // Access projects data and prioritize Demo projects
+      // Sort projects to show demo projects first, then regular projects
       return Object.values(this.$projects_data).sort((a, b) => {
-        return b.Demo - a.Demo; // Demo projects first
+        return b.Demo - a.Demo;
       });
+    },
+    theme() {
+      return this.$vuetify.theme;
     },
     visibleProjects() {
       // Show only maxVisibleProjects if showMore is false
@@ -158,7 +161,7 @@ export default {
 }
 
 .project-content:hover {
-  background-color: #e0f7fa; /* Light cyan background on hover */
+  background-color: v-bind('theme.global.current.dark ? "#111111" : "#e0f7fa"');
   border-radius: 8px; /* Optional rounded corners */
 }
 
@@ -171,13 +174,13 @@ export default {
 .project-description {
   font-size: 1em;
   margin-bottom: 10px;
-  color: #555;
+  color: v-bind('theme.global.current.dark ? "#EEEEEE" : "#555"');
 }
 
 .skills {
   margin-top: 10px;
   font-size: 0.9em;
-  color: #555;
+  color: v-bind('theme.global.current.dark ? "#EEEEEE" : "#555"');
 }
 
 .text-center {

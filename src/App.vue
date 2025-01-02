@@ -1,11 +1,11 @@
 <template>
   <v-app>
     <v-app-bar
-      color="grey-lighten-4"
+      :color="theme.global.current.value.colors.background"
       height="50"
       flat
     >
-    <v-row justify="left" justify-md="center">
+    <v-row justify="center">
         <!-- Navigation for Larger Screens -->
         <v-col cols="auto" class="d-block d-md-none">
           <v-app-bar-nav-icon @click="drawer = !drawer" />
@@ -14,8 +14,8 @@
         <v-col class="d-none d-md-flex" cols="auto">
           <v-btn
             class="me-2"
-            color="black"
-            height="40"
+            color="auto"
+            height="50"
             width="auto"
             variant="text"
             @click="scrollToSection('home')"
@@ -24,8 +24,8 @@
           </v-btn>
           <v-btn
             class="me-2"
-            color="black"
-            height="40"
+            color="auto"
+            height="50"
             width="auto"
             variant="text"
             @click="scrollToSection('publications')"
@@ -34,8 +34,8 @@
           </v-btn>
           <v-btn
             class="me-2"
-            color="black"
-            height="40"
+            color="auto"
+            height="50"
             width="auto"
             variant="text"
             @click="scrollToSection('experience')"
@@ -44,13 +44,26 @@
           </v-btn>
           <v-btn
             class="me-2"
-            color="black"
-            height="40"
+            color="auto"
+            height="50"
             width="auto"
             variant="text"
             @click="scrollToSection('projects')"
           >
             Projects
+          </v-btn>
+        </v-col>
+
+        <!-- Add theme toggle button -->
+        <v-col cols="auto" class="d-flex align-center">
+          <v-btn
+            icon
+            variant="text"
+            @click="toggleTheme"
+          >
+            <v-icon>
+              {{ theme.global.current.dark ? 'mdi-weather-sunny' : 'mdi-weather-night' }}
+            </v-icon>
           </v-btn>
         </v-col>
       </v-row>
@@ -83,13 +96,33 @@
     <v-main>
       <router-view />
     </v-main>
+
+    <!-- Add the footer -->
+    <AppFooter />
   </v-app>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+import { useTheme } from 'vuetify';
+import AppFooter from '@/components/AppFooter.vue';
 
 const drawer = ref(false);
+const theme = useTheme();
+
+const toggleTheme = () => {
+  theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark';
+  // Optionally save theme preference to localStorage
+  localStorage.setItem('theme', theme.global.name.value);
+};
+
+// Load saved theme preference
+onMounted(() => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    theme.global.name.value = savedTheme;
+  }
+});
 
 const scrollToSection = (section) => {
   const element = document.getElementById(section);
@@ -101,17 +134,19 @@ const scrollToSection = (section) => {
 
 <script>
 export default {
-  name: "RoundButton",
+  name: "App",
+  components: {
+    AppFooter
+  },
   data() {
     return {
-      showPopup: true, // Controls the popup visibility
+      showPopup: true,
     };
   },
   mounted() {
-    // Hide the popup after 3 seconds
     setTimeout(() => {
       this.showPopup = false;
-    }, 3000); // Adjust timing as needed
+    }, 3000);
   },
 };
 </script>

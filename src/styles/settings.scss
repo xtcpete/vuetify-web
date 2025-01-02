@@ -8,3 +8,17 @@
 // @use 'vuetify/settings' with (
 //   $color-pack: false
 // );
+
+// Add theme transition
+.v-application {
+  transition: background-color 0.3s ease;
+}
+
+// Ensure text colors update with theme
+.theme--light {
+  color: #222831;
+}
+
+.theme--dark {
+  color: #EEEEEE;
+}
