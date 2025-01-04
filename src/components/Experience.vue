@@ -17,7 +17,7 @@
                     <div class="timeline-item-content">
                         <div><text class="text-subtitle font-weight-bold" style="padding-right: 1rem;">{{ item.Company }}</text></div>
                         <div><span class="text-high-emphasis text-body-2" style="padding-right: 1rem;"><text class="font-italic">{{item.Title}}</text>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ item.Location }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ item.Date }}</span></div>
-                        <p class="font-weight-regular" style="color: grey;">{{ item.Description }}</p>
+                        <p class="font-weight-regular" style="color: #797979;">{{ item.Description }}</p>
                         <v-row class="skills" justify="start" align="center">
                                 <v-chip
                                     v-for="(skill, skillIndex) in splitSkills(item.Skills)"

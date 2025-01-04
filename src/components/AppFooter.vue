@@ -4,20 +4,20 @@
     :color="theme.global.current.colors.background"
   >
     <v-container>
-      <v-row justify="space-between" align="center">
+      <v-row justify="center" align="center">
         <!-- Copyright -->
-        <v-col cols="auto">
+        <v-col cols="auto" style="padding: 0; min-height: 48px;">
           <span class="text-caption text-grey">
             &copy; 2024 - {{ currentYear }} Gonglin Chen. All rights reserved.
           </span>
         </v-col>
         
-        <v-col cols="auto">
+        <v-col cols="auto" style="padding: 12px;">
           <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fxtcpete.com&count_bg=%23D1988C&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
         </v-col>
 
         <!-- GitHub Link with Description -->
-        <v-col cols="auto" class="d-flex align-center">
+        <v-col cols="auto" class="d-flex align-center" style="padding: 0;">
           <span class="text-caption text-grey me-2">
             If you want to use this template:
           </span>
@@ -56,7 +56,6 @@ export default {
 
 <style scoped>
 .footer {
-  padding: 12px 0;
   position: relative;
   bottom: 0;
   width: 100%;

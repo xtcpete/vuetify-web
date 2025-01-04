@@ -5,69 +5,68 @@
       height="50"
       flat
     >
-    <v-row justify="center">
-        <!-- Navigation for Larger Screens -->
+      <v-row>
+        <!-- Mobile: Left-aligned drawer button -->
         <v-col cols="auto" class="d-block d-md-none">
           <v-app-bar-nav-icon @click="drawer = !drawer" />
+          <v-btn icon variant="text" @click="toggleTheme">
+              <v-icon>
+                {{ isDarkTheme ? 'mdi-weather-sunny' : 'mdi-weather-night' }}
+              </v-icon>
+            </v-btn>
         </v-col>
         
-        <v-col class="d-none d-md-flex" cols="auto">
-          <v-btn
-            class="me-2"
-            color="auto"
-            height="50"
-            width="auto"
-            variant="text"
-            @click="scrollToSection('home')"
-          >
-            Home
-          </v-btn>
-          <v-btn
-            class="me-2"
-            color="auto"
-            height="50"
-            width="auto"
-            variant="text"
-            @click="scrollToSection('publications')"
-          >
-            Publications
-          </v-btn>
-          <v-btn
-            class="me-2"
-            color="auto"
-            height="50"
-            width="auto"
-            variant="text"
-            @click="scrollToSection('experience')"
-          >
-            Experience
-          </v-btn>
-          <v-btn
-            class="me-2"
-            color="auto"
-            height="50"
-            width="auto"
-            variant="text"
-            @click="scrollToSection('projects')"
-          >
-            Projects
-          </v-btn>
-        </v-col>
-
-        <!-- Add theme toggle button -->
-        <v-col cols="auto" class="d-flex align-center">
-          <v-btn
-            icon
-            variant="text"
-            @click="toggleTheme"
-          >
-            <v-icon>
-              {{ isDarkTheme ? 'mdi-weather-sunny' : 'mdi-weather-night' }}
-            </v-icon>
-          </v-btn>
+        <!-- Desktop: Centered navigation -->
+        <v-col cols="12" md="12" class="d-none d-md-flex justify-center align-center">
+          <div class="d-flex">
+            <v-btn
+              class="me-2"
+              color="auto"
+              height="50"
+              width="auto"
+              variant="text"
+              @click="scrollToSection('home')"
+            >
+              Home
+            </v-btn>
+            <v-btn
+              class="me-2"
+              color="auto"
+              height="50"
+              width="auto"
+              variant="text"
+              @click="scrollToSection('publications')"
+            >
+              Publications
+            </v-btn>
+            <v-btn
+              class="me-2"
+              color="auto"
+              height="50"
+              width="auto"
+              variant="text"
+              @click="scrollToSection('experience')"
+            >
+              Experience
+            </v-btn>
+            <v-btn
+              class="me-2"
+              color="auto"
+              height="50"
+              width="auto"
+              variant="text"
+              @click="scrollToSection('projects')"
+            >
+              Projects
+            </v-btn>
+            <v-btn icon variant="text" @click="toggleTheme">
+              <v-icon>
+                {{ isDarkTheme ? 'mdi-weather-sunny' : 'mdi-weather-night' }}
+              </v-icon>
+            </v-btn>
+          </div>
         </v-col>
       </v-row>
-
     </v-app-bar>
 
     <!-- Drawer for Small Screens -->

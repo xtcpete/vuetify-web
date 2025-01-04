@@ -89,7 +89,7 @@ export default {
 
 .journal {
   font-size: 0.9em;
-  color: #444;
+  color: #797979;
   font-style: italic;
   margin-bottom: 12px;
 }
