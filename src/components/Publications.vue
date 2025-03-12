@@ -31,7 +31,7 @@
                   <div class="title">{{ publication.Title }}</div>
                   <div class="authors">{{ publication.Authors }}</div>
                   <div class="journal">{{ publication.Journal }}</div>
-                  <v-btn color="#00ADB5" :href="publication.id" target="_blank" small>Read More</v-btn>
+                  <v-btn color="#00ADB5" @click="openLink(publication.id)" small>Read More</v-btn>
                   </v-col>
               </v-row>
             <!-- Conditional HR -->
@@ -40,11 +40,27 @@
         </v-col>
         </v-row>
       </v-card>
+
+      <v-snackbar
+        v-model="snackbar"
+        color="orange darken-2"
+        multi-line
+        timeout="1000"
+        top
+        >
+        Coming soon!
+        </v-snackbar>
     </v-sheet>
+
 </template>
   
 <script>
 export default {
+  data() {
+        return {
+            snackbar: false, // Controls the visibility of the notification popup
+        };
+    },
   computed: {
     sortedPublicationsByKey() {
       // Access the global data and sort by key in descending order
@@ -56,6 +72,19 @@ export default {
       return this.$vuetify.theme;
     },
   },
+  methods: {
+        openLink(link) {
+            if (link) {
+                window.open(link, "_blank"); // Open link in a new tab
+            } else {
+                this.snackbar = true;
+            }
+            },
+        // Split the 'Skills' field into individual skills
+        splitSkills(skills) {
+          return skills ? skills.split(',').map(skill => skill.trim()) : [];
+        },
+    },  
 };
 </script>
 

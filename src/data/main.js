@@ -52,7 +52,7 @@ export const main = [
                 "Title": "Research Assistant", 
                 "id": "https://vgl.ict.usc.edu/",
                 "imgPath": "static/imgs/ict.jpg",
-                "Description": "Led and contributed to advanced research in 3D computer vision, resulting in multiple publications."
+                "Description": "Led and contributed to advanced research in 3D computer vision, resulting in multiple publications. Core contributor to the WRIVA project."
             }
         }
     },
@@ -61,7 +61,7 @@ export const main = [
             "Contact": {
                 "Email": "gonglinc@usc.edu",
             },
-            "Highlight": "I am a first-year Ph.D. student at USC's Vision & Graphics Lab (VGL), advised by Prof. Yajie Zhao. My research focuses on 3D scene reconstruction and object detection. I also work on Natural Language Processing (NLP).",
+            "Highlight": "I am a first-year Ph.D. student at USC’s Vision & Graphics Lab (VGL), advised by Prof. Yajie Zhao. My research focuses on 3D vision, structure-from-motion (SfM), and 3D generative modeling.",
             "Links": {
                 "Github": "https://github.com/xtcpete",
                 "Instagram": "https://instagram.com/xtcpete?igshid=NTc4MTIwNjQ2YQ==",
@@ -158,7 +158,7 @@ export const main = [
             },
             "1": {
                 "Authors": "Gonglin Chen; Jinsen Wu; Haiwei Chen; Wenbin Teng; Zhiyuan Gao; Andrew Feng; Rongjun Qin; Yajie Zhao",
-                "Date": "2024",
+                "Date": "2025",
                 "Title": "Geometry-aware Feature Matching for Large-Scale Structure from Motion",
                 "Abstract": "Establishing consistent and dense correspondences across multiple images is crucial for Structure from Motion (SfM) systems. Significant view changes, such as air-to-ground with very sparse view overlap, pose an even greater challenge to the correspondence solvers. We present a novel optimization-based approach that significantly enhances existing feature matching methods by introducing geometry cues in addition to color cues. This helps fill gaps when there is less overlap in large-scale scenarios. Our method formulates geometric verification as an optimization problem, guiding feature matching within detector-free methods and using sparse correspondences from detector-based methods as anchor points. By enforcing geometric constraints via the Sampson Distance, our approach ensures that the denser correspondences from detector-free methods are geometrically consistent and more accurate. This hybrid strategy significantly improves correspondence density and accuracy, mitigates multi-view inconsistencies, and leads to notable advancements in camera pose accuracy and point cloud density. It outperforms state-of-the-art feature matching methods on benchmark datasets and enables feature matching in challenging extreme large-scale settings.",
                 "Journal": "3DV 2025 (Oral Presentation)",
@@ -167,12 +167,21 @@ export const main = [
             },
             "2": {
                 "Authors": "Zhiyuan Gao*; Wenbin Teng*; Gonglin Chen; Jinsen Wu; Ningli Xu; Rongjun Qin; Andrew Feng; Yajie Zhao",
-                "Date": "2024",
+                "Date": "2025",
                 "Title": "Skyeyes: Ground Roaming using Aerial View Images",
                 "Abstract": "Integrating aerial imagery-based scene generation into applications like autonomous driving and gaming enhances realism in 3D environments, but challenges remain in creating detailed content for occluded areas and ensuring real-time, consistent rendering. In this paper, we introduce Skyeyes, a novel framework that can generate photorealistic sequences of ground view images using only aerial view inputs, thereby creating a ground roaming experience. More specifically, we combine a 3D representation with a view consistent generation model, which ensures coherence between generated images. A view consistency module ensures coherence between generated images. This method allows for the creation of geometrically consistent ground view images, even with large view gaps. The images maintain improved spatial-temporal coherence and realism, enhancing scene comprehension and visualization from aerial perspectives. As far as we have known, there are no publicly available datasets that contains pairwise geo-aligned aerial and ground view imagery. Therefore, we build a large, synthetic, and geo-aligned dataset using Unreal Engine. Both qualitative and quantitative analyses on this synthetic dataset display superior results compared to other leading synthesis approaches.",
                 "Journal": "WACV 2025",
                 "id": "https://chaoren2357.github.io/website-skyeyes/",
                 "Cover" : "/skyeyes.png"
+            },
+            "3": {
+                "Authors": "Gonglin Chen; Tianwen Fu; Haiwei Chen; Wenbin Teng; Hanyuan Xiao; Yajie Zhao",
+                "Date": "2025",
+                "Title": "RDD: Robust Feature Detector and Descriptor using Deformable Transformer",
+                "Abstract": "As a core step in structure-from-motion and SLAM, robust feature detection and description under challenging scenarios such as significant viewpoint changes remain unresolved despite their ubiquity. While recent works have identified the importance of local features in modeling geometric transformations, these methods fail to learn the visual cues present in long-range relationships. We present RDD, a novel and robust keypoint detector/descriptor leveraging the deformable transformer, which captures global context and geometric invariance through deformable self-attention mechanisms. Specifically, we observed that deformable attention focuses on key locations, effectively reducing the search space complexity and modeling the geometric invariance. Furthermore, we introduce a novel refinement module for semi-dense matching, which does not rely on fine-level features. Our proposed methods outperform all state-of-the-art keypoint detection/description methods in feature matching, pose estimation, and visual localization tasks. To ensure comprehensive evaluation, we introduce two challenging benchmarks: one emphasizing large viewpoint and scale variations, and the other being a novel Air-to-Ground benchmark — an evaluation setting which has gained popularity in recent years for 3D reconstruction at different altitudes. Our code and benchmarks will be released upon acceptance of the paper.",
+                "Journal": "CVPR 2025",
+                "id": "",
+                "Cover" : "/RDD.png"
             }
         }
     },
