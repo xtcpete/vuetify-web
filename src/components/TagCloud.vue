@@ -32,7 +32,7 @@ export default {
         opacitySpeed: 5,
         fov: 800,
         speed: 0.3,
-        fontSize: '2.5vh',
+        fontSize: '2.5 rem',
         fontColor: '#00ADB5',
         fontWeight: 'bold',
         fontStyle: 'normal',

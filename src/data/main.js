@@ -162,7 +162,7 @@ export const main = [
                 "Title": "Geometry-aware Feature Matching for Large-Scale Structure from Motion",
                 "Abstract": "Establishing consistent and dense correspondences across multiple images is crucial for Structure from Motion (SfM) systems. Significant view changes, such as air-to-ground with very sparse view overlap, pose an even greater challenge to the correspondence solvers. We present a novel optimization-based approach that significantly enhances existing feature matching methods by introducing geometry cues in addition to color cues. This helps fill gaps when there is less overlap in large-scale scenarios. Our method formulates geometric verification as an optimization problem, guiding feature matching within detector-free methods and using sparse correspondences from detector-based methods as anchor points. By enforcing geometric constraints via the Sampson Distance, our approach ensures that the denser correspondences from detector-free methods are geometrically consistent and more accurate. This hybrid strategy significantly improves correspondence density and accuracy, mitigates multi-view inconsistencies, and leads to notable advancements in camera pose accuracy and point cloud density. It outperforms state-of-the-art feature matching methods on benchmark datasets and enables feature matching in challenging extreme large-scale settings.",
                 "Journal": "3DV 2025 (Oral Presentation)",
-                "id": "https://arxiv.org/abs/2409.02310",
+                "id": "https://xtcpete.github.io/geo-website/",
                 "Cover" : "/geomatcher.png"
             },
             "2": {
@@ -180,7 +180,7 @@ export const main = [
                 "Title": "RDD: Robust Feature Detector and Descriptor using Deformable Transformer",
                 "Abstract": "As a core step in structure-from-motion and SLAM, robust feature detection and description under challenging scenarios such as significant viewpoint changes remain unresolved despite their ubiquity. While recent works have identified the importance of local features in modeling geometric transformations, these methods fail to learn the visual cues present in long-range relationships. We present RDD, a novel and robust keypoint detector/descriptor leveraging the deformable transformer, which captures global context and geometric invariance through deformable self-attention mechanisms. Specifically, we observed that deformable attention focuses on key locations, effectively reducing the search space complexity and modeling the geometric invariance. Furthermore, we introduce a novel refinement module for semi-dense matching, which does not rely on fine-level features. Our proposed methods outperform all state-of-the-art keypoint detection/description methods in feature matching, pose estimation, and visual localization tasks. To ensure comprehensive evaluation, we introduce two challenging benchmarks: one emphasizing large viewpoint and scale variations, and the other being a novel Air-to-Ground benchmark — an evaluation setting which has gained popularity in recent years for 3D reconstruction at different altitudes. Our code and benchmarks will be released upon acceptance of the paper.",
                 "Journal": "CVPR 2025",
-                "id": "",
+                "id": "https://xtcpete.github.io/rdd/",
                 "Cover" : "/RDD.png"
             }
         }
