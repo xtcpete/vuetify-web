@@ -46,14 +46,14 @@
                   </v-btn>
                   <v-btn
                     icon
-                    :href="$info_data.Links.Instagram"
+                    :href="$info_data.Links.GoogleScholar"
                     color="#00ADB5"
                     class="mx-2"
                     elevation="0"
                     outlined
                     target="_blank"
                   >
-                    <v-icon>mdi-instagram</v-icon>
+                    <v-icon>mdi-school</v-icon>
                   </v-btn>
                 </v-row> 
                 
@@ -61,7 +61,7 @@
                 <v-row justify="start" class="resume-btn mt-2">
                   <v-btn
                     class="mt-4 mx-2"
-                    color="black"
+                    color="#00ADB5"
                     dark
                     rounded
                     @click="openResume"
@@ -95,7 +95,6 @@
                 </v-card-text>
               </v-col>
               <v-col cols="12" md="6" justify="center">
-                <TagCloud />
               </v-col>
             </v-row>
           </v-card>
@@ -106,7 +105,7 @@
 
 <script setup>
   //animated cloud
-  import TagCloud from './TagCloud.vue';
+
 </script>
 
 <script>

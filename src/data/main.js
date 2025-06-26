@@ -61,10 +61,10 @@ export const main = [
             "Contact": {
                 "Email": "gonglinc@usc.edu",
             },
-            "Highlight": "I am a first-year Ph.D. student at USC’s Vision & Graphics Lab (VGL), advised by Prof. Yajie Zhao. My research focuses on 3D vision, structure-from-motion (SfM), and 3D generative modeling.",
+            "Highlight": "I am a first-year Ph.D. student at USC’s Vision & Graphics Lab (VGL), advised by Prof. Yajie Zhao. My research focuses on 3D vision and 3D generative modeling.",
             "Links": {
                 "Github": "https://github.com/xtcpete",
-                "Instagram": "https://instagram.com/xtcpete?igshid=NTc4MTIwNjQ2YQ==",
+                "GoogleScholar": "https://scholar.google.com/citations?user=kY9gogcAAAAJ&hl=en",
                 "LinkedIn": "https://www.linkedin.com/in/xtcpetecgl"
             },
             "Name": "Gonglin Chen",
