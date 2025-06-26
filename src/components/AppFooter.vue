@@ -11,10 +11,6 @@
             &copy; 2024 - {{ currentYear }} Gonglin Chen. All rights reserved.
           </span>
         </v-col>
-        
-        <v-col cols="auto">
-          <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fxtcpete.com&count_bg=%23D1988C&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
-        </v-col>
 
         <!-- GitHub Link with Description -->
         <v-col cols="auto" class="d-flex align-center" style="padding: 0 0 0 12px;">
