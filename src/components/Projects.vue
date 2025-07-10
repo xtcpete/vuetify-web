@@ -43,7 +43,7 @@
             </v-row>
           
             <!-- Single Toggle Button -->
-            <div class="text-center" v-if="projects.length > maxVisibleProjects">
+            <div class="text-center mt-8" v-if="projects.length > maxVisibleProjects">
                 <v-btn @click="toggleCollapse" class="modern-btn" size="large">
                 <v-icon left>{{ showMore ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
                 {{ showMore ? "Show Less" : "Show More" }}

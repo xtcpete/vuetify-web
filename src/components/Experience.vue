@@ -118,7 +118,7 @@ export default {
   padding-left: 1rem;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   border-radius: 8px;
-  padding: 1rem 1rem 1rem 3rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   margin-bottom: 1rem;
   background: rgba(255, 255, 255, 0.02);
   border-left: 2px solid transparent;
@@ -167,7 +167,7 @@ export default {
 }
 
 .timeline-item-content {
-    padding-top: 10px;
+    padding-top: 5px;
     transition: all 0.3s ease;
 }
 
@@ -175,8 +175,8 @@ export default {
     transform: translateX(12px) translateY(-2px);
     background: rgba(66, 133, 244, 0.05);
     border-radius: 12px;
-    padding: 16px;
-    margin-left: -8px;
+    padding: 12px;
+    margin-left: -6px;
     box-shadow: 0 4px 12px rgba(66, 133, 244, 0.15);
 }
 
