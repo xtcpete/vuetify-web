@@ -201,14 +201,14 @@ export const main = [
             },
             "2": {
                 "Date": "November 2024",
-                "Title": "1 Paper accepted to WACV 2025",
+                "Title": "1 paper accepted to WACV 2025",
                 "Description": "Our collaborative work 'Skyeyes: Ground Roaming using Aerial View Images' has been accepted to WACV 2025, enabling photorealistic ground view synthesis from aerial imagery.",
                 "Link": "https://chaoren2357.github.io/website-skyeyes/",
                 "Type": "Publication"
             },
             "3": {
                 "Date": "January 2025",
-                "Title": "1 Paper Accepted to CVPR 2025",
+                "Title": "1 paper accepted to CVPR 2025",
                 "Description": "Our paper 'RDD: Robust Feature Detector and Descriptor using Deformable Transformer' has been accepted to CVPR 2025! This work introduces novel deformable attention mechanisms for robust feature matching.",
                 "Link": "https://xtcpete.github.io/rdd/",
                 "Type": "Publication"
