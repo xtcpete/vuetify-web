@@ -31,9 +31,9 @@
                                 v-for="(skill, skillIndex) in splitSkills(project.Skills)"
                                 :key="skillIndex"
                                 class="mt-3 mr-3 skill-chip"
-                                outlined
-                                color="cyan-lighten-2"
-                                text-color="white"
+                                variant="outlined"
+                                color="primary"
+                                size="small"
                                 >
                                 {{ skill }}
                             </v-chip>
@@ -44,7 +44,7 @@
           
             <!-- Single Toggle Button -->
             <div class="text-center" v-if="projects.length > maxVisibleProjects">
-                <v-btn @click="toggleCollapse" color="#00ADB5" outlined>
+                <v-btn @click="toggleCollapse" class="modern-btn" size="large">
                 <v-icon left>{{ showMore ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
                 {{ showMore ? "Show Less" : "Show More" }}
                 </v-btn>
@@ -154,37 +154,104 @@ export default {
   padding: 20px;
   text-decoration: none;
   color: inherit;
-  transition: background-color 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   border-radius: 0;
   height: 100%;
   padding-bottom: 24px;
+  position: relative;
+  overflow: hidden;
 }
 
 .project-content:hover {
-  background-color: v-bind('theme.global.current.dark ? "#111111" : "#e0f7fa"');
-  border-radius: 8px; /* Optional rounded corners */
+  background: linear-gradient(135deg, rgba(66, 133, 244, 0.08) 0%, rgba(37, 99, 235, 0.12) 100%);
+  border-radius: 12px;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(66, 133, 244, 0.25), 0 4px 12px rgba(66, 133, 244, 0.15);
+  border-left: 4px solid #4285f4;
+  padding-left: 24px;
+}
+
+.project-content:hover .project-title {
+  color: #4285f4;
+  transform: translateX(4px);
+}
+
+.project-content:hover .project-description {
+  transform: translateX(4px);
 }
 
 .project-title {
   font-size: 1.2em;
   font-weight: bold;
   margin-bottom: 10px;
+  transition: all 0.3s ease;
 }
 
 .project-description {
   font-size: 1em;
   margin-bottom: 10px;
   color: v-bind('theme.global.current.dark ? "#EEEEEE" : "#555"');
+  transition: all 0.3s ease;
 }
 
 .skills {
   margin-top: 10px;
   font-size: 0.9em;
   color: v-bind('theme.global.current.dark ? "#EEEEEE" : "#555"');
+  transition: all 0.3s ease;
+}
+
+.project-content:hover .skills {
+  transform: translateX(4px);
 }
 
 .text-center {
   text-align: center;
   margin-top: 20px;
+}
+
+/* Modern Button Styles */
+.modern-btn {
+  background: linear-gradient(135deg, #4285f4 0%, #2563eb 100%) !important;
+  color: white !important;
+  border: none !important;
+  padding: 12px 24px !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 8px rgba(66, 133, 244, 0.3) !important;
+  border-radius: 20px !important;
+}
+
+.modern-btn:hover {
+  background: linear-gradient(135deg, #3367d6 0%, #1d4ed8 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(66, 133, 244, 0.4) !important;
+}
+
+/* Modern Chip Styles */
+.modern-chip {
+  background: linear-gradient(135deg, #4285f4 0%, #2563eb 100%) !important;
+  color: white !important;
+  border: none !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 6px rgba(66, 133, 244, 0.3) !important;
+}
+
+.modern-chip:hover {
+  background: linear-gradient(135deg, #3367d6 0%, #1d4ed8 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 10px rgba(66, 133, 244, 0.4) !important;
+}
+
+/* Skill Chip Styles - Informational tags, not interactive */
+.skill-chip {
+  background: rgba(66, 133, 244, 0.08) !important;
+  border: 1px solid rgba(66, 133, 244, 0.3) !important;
+  color: #4285f4 !important;
+  font-weight: 500 !important;
+  font-size: 0.75rem !important;
+  cursor: default !important;
 }
 </style>

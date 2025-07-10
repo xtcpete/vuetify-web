@@ -35,12 +35,14 @@ const info_data = main[1]['Info']
 const education_data = main[2]['Education']
 const projects_data = main[3]['Projects']
 const publications_data = main[4]['Publications']
+const news_data = main[4]['News']
 
 app.config.globalProperties.$info_data = info_data
 app.config.globalProperties.$experiences_data = experiences_data
 app.config.globalProperties.$education_data = education_data
 app.config.globalProperties.$projects_data = projects_data
 app.config.globalProperties.$publications_data = publications_data
+app.config.globalProperties.$news_data = news_data
 app.config.globalProperties.$detailsData = details
 app.config.globalProperties.$mainData = main
 // Register plugins and Vuetify

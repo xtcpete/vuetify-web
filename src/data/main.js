@@ -183,6 +183,43 @@ export const main = [
                 "id": "https://xtcpete.github.io/rdd/",
                 "Cover" : "/RDD.png"
             }
+        },
+        "News": {
+            "0": {
+                "Date": "September 2024",
+                "Title": "Started my Ph.D. at USC",
+                "Description": "Officially started my Ph.D. in Computer Science at USC, focusing on computer vision and 3D reconstruction under the supervision of Prof. Yajie Zhao.",
+                "Link": "",
+                "Type": "Academic"
+            },
+            "1": {
+                "Date": "November 2024",
+                "Title": "1 paper accepted as oral presentation at 3DV 2025",
+                "Description": "Selected for oral presentation at 3DV 2025 for our paper 'Geometry-aware Feature Matching for Large-Scale Structure from Motion'. Only 5% of submissions receive oral presentation.",
+                "Link": "https://xtcpete.github.io/geo-website/",
+                "Type": "Publication"
+            },
+            "2": {
+                "Date": "November 2024",
+                "Title": "1 Paper accepted to WACV 2025",
+                "Description": "Our collaborative work 'Skyeyes: Ground Roaming using Aerial View Images' has been accepted to WACV 2025, enabling photorealistic ground view synthesis from aerial imagery.",
+                "Link": "https://chaoren2357.github.io/website-skyeyes/",
+                "Type": "Publication"
+            },
+            "3": {
+                "Date": "January 2025",
+                "Title": "1 Paper Accepted to CVPR 2025",
+                "Description": "Our paper 'RDD: Robust Feature Detector and Descriptor using Deformable Transformer' has been accepted to CVPR 2025! This work introduces novel deformable attention mechanisms for robust feature matching.",
+                "Link": "https://xtcpete.github.io/rdd/",
+                "Type": "Publication"
+            },
+            "4": {
+                "Date": "June 2025",
+                "Title": "RDD is placed 4th in image matching challenge 2025",
+                "Description": "Our paper 'RDD: Robust Feature Detector and Descriptor using Deformable Transformer' has been accepted to CVPR 2025! This work introduces novel deformable attention mechanisms for robust feature matching.",
+                "Link": "https://www.kaggle.com/competitions/image-matching-challenge-2025/overview",
+                "Type": "Award"
+            },
         }
     },
 ]

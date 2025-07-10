@@ -12,7 +12,7 @@
                 </v-col>
             </v-row>
             <v-row class="timeline" style="padding-bottom: 48px; padding-right: 24px;">
-              <ol class="timeline-list text-body-1" >
+              <ol class="timeline-list text-body-1" style="width: 100%;">
                 <li v-for="(item, index) in sortedExperiencesByKey" :key="index" class="timeline-item" @click="openLink(item.id)" :style="{ cursor: 'pointer' }">
                     <div class="timeline-item-content">
                         <div><text class="text-subtitle font-weight-bold" style="padding-right: 1rem;">{{ item.Company }}</text></div>
@@ -23,9 +23,9 @@
                                     v-for="(skill, skillIndex) in splitSkills(item.Skills)"
                                     :key="skillIndex"
                                     class="mt-3 mr-3 skill-chip"
-                                    outlined
-                                    color="cyan-lighten-2"
-                                    text-color="white"
+                                    variant="outlined"
+                                    color="primary"
+                                    size="small"
                                     >
                                     {{ skill }}
                                 </v-chip>
@@ -112,7 +112,17 @@ export default {
   min-width: 20px;
 }
 
-.timeline-item { position: relative; list-style: none; padding-left: 1rem;}
+.timeline-item { 
+  position: relative; 
+  list-style: none; 
+  padding-left: 1rem;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-radius: 8px;
+  padding: 1rem 1rem 1rem 3rem;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-left: 2px solid transparent;
+}
 
 .timeline-item:not(:last-child) { margin-bottom: 20px; }
 
@@ -137,13 +147,14 @@ export default {
   content: "";
   position: absolute;
   top: 20px;
-  left: -33px;
-  height: 6px;
-  width: 6px;
-  background: #00ADB5;
+  left: -35px;
+  height: 12px;
+  width: 12px;
+  background: linear-gradient(135deg, #4285f4 0%, #2563eb 100%);
   border-radius: 50%;
-  box-shadow: 0 0 0 4px rgba(0, 173, 181, 1);
-  margin-left: 1rem
+  box-shadow: 0 0 0 4px rgba(66, 133, 244, 0.3);
+  margin-left: 1rem;
+  transition: all 0.3s ease;
 }
 
 .profile-container {
@@ -157,11 +168,77 @@ export default {
 
 .timeline-item-content {
     padding-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-item-content {
+    transform: translateX(12px) translateY(-2px);
+    background: rgba(66, 133, 244, 0.05);
+    border-radius: 12px;
+    padding: 16px;
+    margin-left: -8px;
+    box-shadow: 0 4px 12px rgba(66, 133, 244, 0.15);
 }
 
 .timeline-item:hover {
-  background-color: v-bind('theme.global.current.dark ? "#111111" : "#e0f7fa"');
-  transition: background-color 0.3s ease; /* Smooth transition effect */
-  border-radius: 8px; /* Optional rounded corners */
+  background: linear-gradient(135deg, rgba(66, 133, 244, 0.08) 0%, rgba(37, 99, 235, 0.12) 100%);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(66, 133, 244, 0.25), 0 4px 12px rgba(66, 133, 244, 0.15);
+}
+
+.timeline-item:hover::after {
+  background: linear-gradient(135deg, #3367d6 0%, #1d4ed8 100%);
+  transform: scale(1.5);
+  box-shadow: 0 0 0 8px rgba(66, 133, 244, 0.3), 0 0 20px rgba(66, 133, 244, 0.6);
+  animation: pulse-dot 1.5s infinite ease-in-out;
+}
+
+/* Modern Chip Styles */
+.modern-chip {
+  background: linear-gradient(135deg, #4285f4 0%, #2563eb 100%) !important;
+  color: white !important;
+  border: none !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 6px rgba(66, 133, 244, 0.3) !important;
+}
+
+.modern-chip:hover {
+  background: linear-gradient(135deg, #3367d6 0%, #1d4ed8 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 10px rgba(66, 133, 244, 0.4) !important;
+}
+
+/* Skill Chip Styles - Different from buttons */
+.skill-chip {
+  background: rgba(66, 133, 244, 0.1) !important;
+  border: 1.5px solid #4285f4 !important;
+  color: #4285f4 !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+  cursor: pointer !important;
+}
+
+.skill-chip:hover {
+  background: rgba(66, 133, 244, 0.15) !important;
+  border-color: #3367d6 !important;
+  color: #3367d6 !important;
+}
+
+.skill-chip.v-chip--selected {
+  background: #4285f4 !important;
+  color: white !important;
+  border-color: #4285f4 !important;
+}
+
+/* Pulse animation for timeline dots */
+@keyframes pulse-dot {
+  0%, 100% {
+    box-shadow: 0 0 0 8px rgba(66, 133, 244, 0.3), 0 0 20px rgba(66, 133, 244, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(66, 133, 244, 0.1), 0 0 25px rgba(66, 133, 244, 0.8);
+  }
 }
 </style>

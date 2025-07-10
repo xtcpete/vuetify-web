@@ -18,20 +18,21 @@
               <v-row style="padding-left: 1rem;">
                   <!-- Image Section -->
                   <v-col cols="3" class="d-none d-md-flex mt-0">
-                  <v-img
-                      :src="publication.Cover"
-                      height="150px"
-                      contain
-                      alt="Publication Cover"
-                  ></v-img>
+                  <div class="publication-image-container">
+                    <v-img
+                        :src="publication.Cover"
+                        class="publication-image"
+                        alt="Publication Cover"
+                    ></v-img>
+                  </div>
                   </v-col>
 
                   <!-- Content Section -->
-                  <v-col cols="auto" class="mt-0">
+                  <v-col cols="auto" class="mt-0 publication-content">
                   <div class="title">{{ publication.Title }}</div>
                   <div class="authors">{{ publication.Authors }}</div>
                   <div class="journal">{{ publication.Journal }}</div>
-                  <v-btn color="#00ADB5" @click="openLink(publication.id)" small>Read More</v-btn>
+                  <v-btn class="modern-btn" @click="openLink(publication.id)" small>Read More</v-btn>
                   </v-col>
               </v-row>
             <!-- Conditional HR -->
@@ -101,6 +102,31 @@ export default {
   padding: 20px;
 }
 
+.publication-item {
+  border-radius: 12px;
+  padding: 16px;
+  margin: -16px;
+  margin-bottom: 8px;
+}
+
+.publication-image-container {
+  width: 100%;
+  height: 150px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(66, 133, 244, 0.05);
+  border: 2px solid rgba(66, 133, 244, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.publication-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+}
+
 
 .title {
   font-weight: bold;
@@ -127,5 +153,24 @@ hr {
   border: none;
   border-top: 1px solid #ddd;
   margin: 10px 0;
+}
+
+/* Modern Button Styles */
+.modern-btn {
+  background: linear-gradient(135deg, #4285f4 0%, #2563eb 100%) !important;
+  color: white !important;
+  border: none !important;
+  padding: 8px 16px !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 8px rgba(66, 133, 244, 0.3) !important;
+  border-radius: 20px !important;
+}
+
+.modern-btn:hover {
+  background: linear-gradient(135deg, #3367d6 0%, #1d4ed8 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(66, 133, 244, 0.4) !important;
 }   
 </style>
