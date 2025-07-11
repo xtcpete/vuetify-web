@@ -285,8 +285,8 @@
   padding: 8px 12px;
   margin-bottom: 8px;
   border-radius: 8px;
-  border: 1px solid rgba(66, 133, 244, 0.1);
-  background: rgba(66, 133, 244, 0.02);
+  border: 1px solid rgba(var(--v-theme-on-surface), 0.1);
+  background: rgba(var(--v-theme-on-surface), 0.02);
   transition: all 0.3s ease;
 }
 
@@ -309,11 +309,12 @@
 
 .news-date-row {
   font-size: 0.75em;
-  color: #666;
+  color: rgb(var(--v-theme-on-surface));
+  opacity: 0.7;
   font-weight: 500;
   width: 100%;
   padding-bottom: 2px;
-  border-bottom: 1px solid rgba(66, 133, 244, 0.1);
+  border-bottom: 1px solid rgba(var(--v-theme-on-surface), 0.1);
 }
 
 .news-title-row {
@@ -326,7 +327,7 @@
 .news-title-simple {
   font-size: 0.9em;
   font-weight: 600;
-  color: #333;
+  color: rgb(var(--v-theme-on-surface));
   line-height: 1.2;
   flex-grow: 1;
 }

@@ -15,9 +15,13 @@
               <ol class="timeline-list text-body-1" style="width: 100%;">
                 <li v-for="(item, index) in sortedExperiencesByKey" :key="index" class="timeline-item" @click="openLink(item.id)" :style="{ cursor: 'pointer' }">
                     <div class="timeline-item-content">
-                        <div><text class="text-subtitle font-weight-bold" style="padding-right: 1rem;">{{ item.Company }}</text></div>
-                        <div><span class="text-high-emphasis text-body-2" style="padding-right: 1rem;"><text class="font-italic">{{item.Title}}</text>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ item.Location }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ item.Date }}</span></div>
-                        <p class="font-weight-regular" style="color: #797979;">{{ item.Description }}</p>
+                        <div class="company-name">{{ item.Company }}</div>
+                        <div class="job-details">
+                            <div class="job-title">{{ item.Title }}</div>
+                            <div class="job-location">{{ item.Location }}</div>
+                            <div class="job-date">{{ item.Date }}</div>
+                        </div>
+                        <p class="job-description">{{ item.Description }}</p>
                         <v-row class="skills" justify="start" align="center">
                                 <v-chip
                                     v-for="(skill, skillIndex) in splitSkills(item.Skills)"
@@ -169,6 +173,77 @@ export default {
 .timeline-item-content {
     padding-top: 5px;
     transition: all 0.3s ease;
+}
+
+/* Company name styling */
+.company-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgb(var(--v-theme-on-surface));
+    margin-bottom: 8px;
+}
+
+/* Job details container - responsive layout */
+.job-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 12px;
+}
+
+/* Desktop layout - horizontal arrangement */
+@media (min-width: 768px) {
+    .job-details {
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+}
+
+/* Individual job detail elements */
+.job-title {
+    font-style: italic;
+    font-weight: 500;
+    color: rgb(var(--v-theme-on-surface));
+    opacity: 0.9;
+}
+
+.job-location {
+    color: rgb(var(--v-theme-on-surface));
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+.job-date {
+    color: rgb(var(--v-theme-on-surface));
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+/* Add separators on desktop */
+@media (min-width: 768px) {
+    .job-location::before {
+        content: " | ";
+        color: rgb(var(--v-theme-on-surface));
+        opacity: 0.5;
+        margin-right: 8px;
+    }
+    
+    .job-date::before {
+        content: " | ";
+        color: rgb(var(--v-theme-on-surface));
+        opacity: 0.5;
+        margin-right: 8px;
+    }
+}
+
+/* Job description styling */
+.job-description {
+    color: rgb(var(--v-theme-on-surface));
+    opacity: 0.7;
+    line-height: 1.5;
+    margin-bottom: 12px;
 }
 
 .timeline-item:hover .timeline-item-content {

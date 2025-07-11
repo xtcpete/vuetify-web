@@ -26,18 +26,18 @@
                   <a :href="project.id" target="_blank" class="project-content">
                     <h3 class="project-title">{{ project.Title }}</h3>
                     <p class="project-description">{{ project.Description }}</p>
-                    <v-row class="skills" justify="start" align="center">
+                    <div class="skills-container">
                             <v-chip
                                 v-for="(skill, skillIndex) in splitSkills(project.Skills)"
                                 :key="skillIndex"
-                                class="mt-3 mr-3 skill-chip"
+                                class="skill-chip"
                                 variant="outlined"
                                 color="primary"
                                 size="small"
                                 >
                                 {{ skill }}
                             </v-chip>
-                    </v-row>
+                    </div>
                   </a>
                 </v-col>
             </v-row>
@@ -194,14 +194,16 @@ export default {
   transition: all 0.3s ease;
 }
 
-.skills {
-  margin-top: 10px;
-  font-size: 0.9em;
-  color: v-bind('theme.global.current.dark ? "#EEEEEE" : "#555"');
+.skills-container {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: flex-start;
   transition: all 0.3s ease;
 }
 
-.project-content:hover .skills {
+.project-content:hover .skills-container {
   transform: translateX(4px);
 }
 
@@ -253,5 +255,6 @@ export default {
   font-weight: 500 !important;
   font-size: 0.75rem !important;
   cursor: default !important;
+  margin: 0 !important;
 }
 </style>
