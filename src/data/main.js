@@ -61,7 +61,7 @@ export const main = [
             "Contact": {
                 "Email": "gonglinc@usc.edu",
             },
-            "Highlight": "I am a first-year Ph.D. student at USC’s Vision & Graphics Lab (VGL), advised by Prof. Yajie Zhao. My research focuses on 3D vision and 3D generative modeling.",
+            "Highlight": "I am a second-year Ph.D. student at USC’s Vision & Graphics Lab (VGL), advised by Prof. Yajie Zhao. My research focuses on 3D vision and 3D generative modeling.",
             "Links": {
                 "Github": "https://github.com/xtcpete",
                 "GoogleScholar": "https://scholar.google.com/citations?user=kY9gogcAAAAJ&hl=en",
@@ -182,6 +182,15 @@ export const main = [
                 "Journal": "CVPR 2025",
                 "id": "https://xtcpete.github.io/rdd/",
                 "Cover" : "/RDD.png"
+            },
+            "4": {
+                "Authors": "Wenbin Teng; Gonglin Chen; Haiwei Chen; Yajie Zhao",
+                "Date": "2025",
+                "Title": "FVGen: Accelerating Novel-View Synthesis with Adversarial Video Diffusion Distillation",
+                "Abstract": "Recent progress in 3D reconstruction has enabled realistic 3D models from dense image captures, yet challenges persist with sparse views, often leading to artifacts in unseen areas. Recent works leverage Video Diffusion Models (VDMs) to generate dense observations, filling the gaps when only sparse views are available for 3D reconstruction tasks. A significant limitation of these methods is their slow sampling speed when using VDMs. In this paper, we present FVGen, a novel framework that addresses this challenge by enabling fast novel view synthesis using VDMs in as few as four sampling steps. We propose a novel video diffusion model distillation method that distills a multi-step denoising teacher model into a few-step denoising student model using Generative Adversarial Networks (GANs) and softened reverse KL-divergence minimization. Extensive experiments on real-world datasets show that, compared to previous works, our framework generates the same number of novel views with similar (or even better) visual quality while reducing sampling time by more than 90%. FVGen significantly improves time efficiency for downstream reconstruction tasks, particularly when working with sparse input views (more than 2) where pre-trained VDMs need to be run multiple times to achieve better spatial coverage.",
+                "Journal": "ICCV 2025",
+                "id": "https://wbteng9526.github.io/fvgen/",
+                "Cover" : "/fvgen.png"
             }
         },
         "News": {
@@ -220,6 +229,13 @@ export const main = [
                 "Link": "https://www.kaggle.com/competitions/image-matching-challenge-2025/overview",
                 "Type": "Award"
             },
+            "5":{
+                "Date": "June 2025",
+                "Title": "1 paper accepted to ICCV 2025",
+                "Description": "Our paper 'FVGen: Accelerating Novel-View Synthesis with Adversarial Video Diffusion Distillation' has been accepted to ICCV 2025.",
+                "Link": "https://wbteng9526.github.io/fvgen/",
+                "Type": "Publication"
+            }
         }
     },
 ]
