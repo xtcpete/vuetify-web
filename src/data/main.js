@@ -153,7 +153,7 @@ export const main = [
                 "Title": "Machine Learning-Based Defect Identification Method at the c-Si/a-Si: H Interface",
                 "Abstract": "Generation of defects leads to performance degradation of silicon solar cells. However, ab initio simulations of defect structures are constrained by system size, while the representative simulations of amorphous silicon (aSi) require a large amount of computation because of the wide distribution of relevant local structures. We propose a machine learning-based approach to replace the quantum mechanical ab initio calculations to identify defect formation in aSi-related structures. We demonstrate that with a correlated set of descriptors and a representative set of training data, the machine learning method can identify localized defects in structures containing Si-structures with high fidelity.",
                 "Journal": "PSVC 50",
-                "id": "https://ieeexplore.ieee.org/abstract/document/10359905",
+                "paper": "https://ieeexplore.ieee.org/abstract/document/10359905",
                 "Cover" : "/cSi-aSi.png"
             },
             "1": {
@@ -162,7 +162,8 @@ export const main = [
                 "Title": "Geometry-aware Feature Matching for Large-Scale Structure from Motion",
                 "Abstract": "Establishing consistent and dense correspondences across multiple images is crucial for Structure from Motion (SfM) systems. Significant view changes, such as air-to-ground with very sparse view overlap, pose an even greater challenge to the correspondence solvers. We present a novel optimization-based approach that significantly enhances existing feature matching methods by introducing geometry cues in addition to color cues. This helps fill gaps when there is less overlap in large-scale scenarios. Our method formulates geometric verification as an optimization problem, guiding feature matching within detector-free methods and using sparse correspondences from detector-based methods as anchor points. By enforcing geometric constraints via the Sampson Distance, our approach ensures that the denser correspondences from detector-free methods are geometrically consistent and more accurate. This hybrid strategy significantly improves correspondence density and accuracy, mitigates multi-view inconsistencies, and leads to notable advancements in camera pose accuracy and point cloud density. It outperforms state-of-the-art feature matching methods on benchmark datasets and enables feature matching in challenging extreme large-scale settings.",
                 "Journal": "3DV 2025 (Oral Presentation)",
-                "id": "https://xtcpete.github.io/geo-website/",
+                "page": "https://xtcpete.github.io/geo-website/",
+                "paper": "https://xtcpete.github.io/geo-website/assets/paper.pdf",
                 "Cover" : "/geomatcher.png"
             },
             "2": {
@@ -171,7 +172,8 @@ export const main = [
                 "Title": "Skyeyes: Ground Roaming using Aerial View Images",
                 "Abstract": "Integrating aerial imagery-based scene generation into applications like autonomous driving and gaming enhances realism in 3D environments, but challenges remain in creating detailed content for occluded areas and ensuring real-time, consistent rendering. In this paper, we introduce Skyeyes, a novel framework that can generate photorealistic sequences of ground view images using only aerial view inputs, thereby creating a ground roaming experience. More specifically, we combine a 3D representation with a view consistent generation model, which ensures coherence between generated images. A view consistency module ensures coherence between generated images. This method allows for the creation of geometrically consistent ground view images, even with large view gaps. The images maintain improved spatial-temporal coherence and realism, enhancing scene comprehension and visualization from aerial perspectives. As far as we have known, there are no publicly available datasets that contains pairwise geo-aligned aerial and ground view imagery. Therefore, we build a large, synthetic, and geo-aligned dataset using Unreal Engine. Both qualitative and quantitative analyses on this synthetic dataset display superior results compared to other leading synthesis approaches.",
                 "Journal": "WACV 2025",
-                "id": "https://chaoren2357.github.io/website-skyeyes/",
+                "page": "https://chaoren2357.github.io/website-skyeyes/",
+                "paper": "https://arxiv.org/abs/2409.16685",
                 "Cover" : "/skyeyes.png"
             },
             "3": {
@@ -180,7 +182,9 @@ export const main = [
                 "Title": "RDD: Robust Feature Detector and Descriptor using Deformable Transformer",
                 "Abstract": "As a core step in structure-from-motion and SLAM, robust feature detection and description under challenging scenarios such as significant viewpoint changes remain unresolved despite their ubiquity. While recent works have identified the importance of local features in modeling geometric transformations, these methods fail to learn the visual cues present in long-range relationships. We present RDD, a novel and robust keypoint detector/descriptor leveraging the deformable transformer, which captures global context and geometric invariance through deformable self-attention mechanisms. Specifically, we observed that deformable attention focuses on key locations, effectively reducing the search space complexity and modeling the geometric invariance. Furthermore, we introduce a novel refinement module for semi-dense matching, which does not rely on fine-level features. Our proposed methods outperform all state-of-the-art keypoint detection/description methods in feature matching, pose estimation, and visual localization tasks. To ensure comprehensive evaluation, we introduce two challenging benchmarks: one emphasizing large viewpoint and scale variations, and the other being a novel Air-to-Ground benchmark — an evaluation setting which has gained popularity in recent years for 3D reconstruction at different altitudes. Our code and benchmarks will be released upon acceptance of the paper.",
                 "Journal": "CVPR 2025",
-                "id": "https://xtcpete.github.io/rdd/",
+                "page": "https://xtcpete.github.io/rdd/",
+                "paper": "https://arxiv.org/abs/2505.08013",
+                "code": "https://github.com/xtcpete/rdd",
                 "Cover" : "/RDD.png"
             },
             "4": {
@@ -189,7 +193,8 @@ export const main = [
                 "Title": "FVGen: Accelerating Novel-View Synthesis with Adversarial Video Diffusion Distillation",
                 "Abstract": "Recent progress in 3D reconstruction has enabled realistic 3D models from dense image captures, yet challenges persist with sparse views, often leading to artifacts in unseen areas. Recent works leverage Video Diffusion Models (VDMs) to generate dense observations, filling the gaps when only sparse views are available for 3D reconstruction tasks. A significant limitation of these methods is their slow sampling speed when using VDMs. In this paper, we present FVGen, a novel framework that addresses this challenge by enabling fast novel view synthesis using VDMs in as few as four sampling steps. We propose a novel video diffusion model distillation method that distills a multi-step denoising teacher model into a few-step denoising student model using Generative Adversarial Networks (GANs) and softened reverse KL-divergence minimization. Extensive experiments on real-world datasets show that, compared to previous works, our framework generates the same number of novel views with similar (or even better) visual quality while reducing sampling time by more than 90%. FVGen significantly improves time efficiency for downstream reconstruction tasks, particularly when working with sparse input views (more than 2) where pre-trained VDMs need to be run multiple times to achieve better spatial coverage.",
                 "Journal": "ICCV 2025",
-                "id": "https://wbteng9526.github.io/fvgen/",
+                "page": "https://wbteng9526.github.io/fvgen/",
+                "paper": "https://arxiv.org/abs/2508.06392",
                 "Cover" : "/fvgen.png"
             }
         },

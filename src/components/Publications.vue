@@ -32,7 +32,18 @@
                   <div class="title">{{ publication.Title }}</div>
                   <div class="authors">{{ publication.Authors }}</div>
                   <div class="journal">{{ publication.Journal }}</div>
-                  <v-btn class="modern-btn" @click="openLink(publication.id)" small>Read More</v-btn>
+                  <div class="link-buttons">
+                    <v-btn
+                      v-for="(link, idx) in buildLinks(publication)"
+                      :key="idx"
+                      class="modern-btn mr-2 mb-2"
+                      @click="openLink(link.url)"
+                      small
+                    >
+                      {{ link.label }}
+                    </v-btn>
+                    
+                  </div>
                   </v-col>
               </v-row>
             <!-- Conditional HR -->
@@ -80,7 +91,37 @@ export default {
             } else {
                 this.snackbar = true;
             }
-            },
+        },
+        buildLinks(pub) {
+          const links = [];
+
+          const add = (url, label) => {
+            if (typeof url === 'string' && url.trim()) {
+              links.push({ label, url });
+            }
+          };
+
+          // Support a few common key aliases that might exist in your data
+          const paperUrl =
+            pub.Paper || pub.PDF || pub.Pdf || pub.paper || pub.pdf ||
+            pub.ArXiv || pub.arXiv || pub.arxiv || pub.DOI || pub.doi ||
+            (pub.Links && (pub.Links.paper || pub.Links.pdf || pub.Links.arxiv || pub.Links.doi));
+
+          const codeUrl =
+            pub.Code || pub.GitHub || pub.Github || pub.code || pub.github ||
+            (pub.Links && (pub.Links.code || pub.Links.github || pub.Links.repo));
+
+          const projectUrl =
+            pub.Project || pub.ProjectPage || pub.Website || pub.Page ||
+            pub.project || pub.projectPage || pub.website || pub.page ||
+            (pub.Links && (pub.Links.project || pub.Links.website || pub.Links.page));
+
+          add(paperUrl, 'Paper');
+          add(codeUrl, 'Code');
+          add(projectUrl, 'Project Page');
+
+          return links;
+        },
         // Split the 'Skills' field into individual skills
         splitSkills(skills) {
           return skills ? skills.split(',').map(skill => skill.trim()) : [];
@@ -174,3 +215,7 @@ hr {
   box-shadow: 0 4px 12px rgba(66, 133, 244, 0.4) !important;
 }   
 </style>
+
+.mr-2 { margin-right: 8px; }
+.mb-2 { margin-bottom: 8px; }
+.link-buttons { display: flex; flex-wrap: wrap; }
