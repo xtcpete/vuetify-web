@@ -2,15 +2,6 @@ export const main = [
     {
         "Experiences": {
             "0": {
-                "Company": "Jeeshow Technology Pty Ltd.",
-                "Date": "Jun. 2018 - Aug. 2018",
-                "Location": "Fuzhou, China",
-                "Skills": "JavaScript, Web Development, Git",
-                "Title": "Web Developer Intern",
-                "imgPath": "static/imgs/jeeshow.png",
-                "Description": "Developed a web application for order management and payment processing for service workers."
-            },
-            "1": {
                 "Comment": "Department of Land, Air, and Water Resources",
                 "Company": "Dahlke Research Lab, University of California, Davis",
                 "Date": "Dec. 2019 - Mar. 2020",
@@ -21,7 +12,7 @@ export const main = [
                 "imgPath": "static/imgs/ucdavis.png",
                 "Description": "Analyzed 30 years of climate data from central California using statistical methods and R, producing visualizations and insights adopted for public education on climate change trends."
             },
-            "2": {
+            "1": {
                 "Comment": "Department of AI Research & Development, Newland Edu",
                 "Company": "Newland Edu, Newland",
                 "Date": "Dec. 2020 - Mar. 2021",
@@ -32,7 +23,7 @@ export const main = [
                 "imgPath": "static/imgs/newland.png",
                 "Description": "Collaborated with a team of engineers on AI-driven projects, improving model accuracy and deploying models showcased at the Fourth Digital China Summit."
             },
-            "3": {
+            "2": {
                 "Comment": "Zimanyi Group, Department of Physics",
                 "Company": "Zimanyi Group, University of California, Davis",
                 "Date": "Jan. 2022 - Jun. 2022",
@@ -43,7 +34,7 @@ export const main = [
                 "imgPath": "static/imgs/ucdavis.png",
                 "Description": "Developed a deep learning model to predict the formation of defects in silicon solar cells, resulting in a publication."
             },
-            "4": {
+            "3": {
                 "Comment": "Vision & Graphics Lab",
                 "Company": "Vision & Graphics Lab, USC Institute for Creative Technologies",
                 "Date": "Jun. 2023 - Present",
@@ -52,7 +43,7 @@ export const main = [
                 "Title": "Research Assistant", 
                 "id": "https://vgl.ict.usc.edu/",
                 "imgPath": "static/imgs/ict.jpg",
-                "Description": "Led and contributed to advanced research in 3D computer vision, resulting in multiple publications. Core contributor to the WRIVA project."
+                "Description": "Led and contributed to advanced research in 3D computer vision, resulting in multiple publications. Core contributor to the IRAPA WRIVA project."
             }
         }
     },
@@ -82,7 +73,12 @@ export const main = [
                 "Date": "January 2023 \u2013 May 2024",
                 "Degree": "MS in Applied Data Science",
                 "School": "University of Southern California"
-            }
+            },
+            "2": {
+                "Date": "August 2024 \u2013 Present",
+                "Degree": "Ph.D. in Computer Science",
+                "School": "University of Southern California"
+            } 
         }
     },
     {
@@ -229,9 +225,9 @@ export const main = [
             },
             "4": {
                 "Date": "June 2025",
-                "Title": "RDD is placed 4th in image matching challenge 2025",
+                "Title": "RDD won the 4th place in image matching challenge 2025",
                 "Description": "Our paper 'RDD: Robust Feature Detector and Descriptor using Deformable Transformer' has been accepted to CVPR 2025! This work introduces novel deformable attention mechanisms for robust feature matching.",
-                "Link": "https://www.kaggle.com/competitions/image-matching-challenge-2025/overview",
+                "Link": "https://www.kaggle.com/competitions/image-matching-challenge-2025/writeups/xtcpete-4th-place-solution",
                 "Type": "Award"
             },
             "5":{

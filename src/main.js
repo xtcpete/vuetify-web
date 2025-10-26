@@ -16,7 +16,6 @@ import * as directives from 'vuetify/directives'
 // Components
 import App from './App.vue'
 import { main } from './data/main.js'
-import { details } from './data/details'
 
 // Composables
 import { createApp } from 'vue'
@@ -43,7 +42,6 @@ app.config.globalProperties.$education_data = education_data
 app.config.globalProperties.$projects_data = projects_data
 app.config.globalProperties.$publications_data = publications_data
 app.config.globalProperties.$news_data = news_data
-app.config.globalProperties.$detailsData = details
 app.config.globalProperties.$mainData = main
 // Register plugins and Vuetify
 registerPlugins(app)

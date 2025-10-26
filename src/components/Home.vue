@@ -59,20 +59,16 @@
                 <v-card-text>
                   <h3 class="section-title mb-3">Education</h3>
                   <ul class="education-list text-body-1">
-                    <li class="mt-3">
-                      <text class="text-subtitle font-weight-bold">University of Southern California</text> <br />
-                      Ph.D in Computer Science <br />
-                      <text class="text-body-2">September 2024 – Present</text>
-                    </li>
-                    <li class="mt-3">
-                      <text class="text-subtitle font-weight-bold">University of Southern California</text> <br />
-                      MS in Applied Data Science <br />
-                      <text class="text-body-2">January 2023 – May 2024</text>
-                    </li>
-                    <li class="mt-3">
-                      <text class="text-subtitle font-weight-bold">University of California, Davis</text> <br />
-                      BS in Statistics, Machine Learning <br />
-                      <text class="text-body-2">July 2017 – June 2022</text>
+                    <li
+                      v-for="(education, index) in educationEntries"
+                      :key="`${education.School}-${index}`"
+                      class="mt-3"
+                    >
+                      <div class="text-subtitle font-weight-bold">
+                        {{ education.School }}
+                      </div>
+                      <div>{{ education.Degree }}</div>
+                      <div class="text-body-2">{{ education.Date }}</div>
                     </li>
                   </ul>
                 </v-card-text>
@@ -174,6 +170,12 @@
     computed: {
       theme() {
         return this.$vuetify.theme;
+      },
+      educationEntries() {
+        if (!this.$education_data) return [];
+        return Object.keys(this.$education_data)
+          .sort((a, b) => Number(b) - Number(a))
+          .map((key) => this.$education_data[key]);
       },
       sortedNewsData() {
         if (!this.$news_data) return [];
