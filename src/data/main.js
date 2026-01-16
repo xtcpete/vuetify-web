@@ -43,7 +43,7 @@ export const main = [
                 "Title": "Research Assistant", 
                 "id": "https://vgl.ict.usc.edu/",
                 "imgPath": "static/imgs/ict.jpg",
-                "Description": "Led and contributed to advanced research in 3D computer vision, resulting in multiple publications. Core contributor to the IRAPA WRIVA project."
+                "Description": "Led and contributed to advanced research in 3D computer vision, resulting in multiple publications. Core contributor to the IARPA WRIVA project."
             }
         }
     },
