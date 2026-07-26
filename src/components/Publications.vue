@@ -17,7 +17,7 @@
             <div class="publication-item">
               <v-row style="padding-left: 1rem;">
                   <!-- Image Section -->
-                  <v-col cols="3" class="d-none d-md-flex mt-0">
+                  <v-col v-if="publication.Cover" cols="3" class="d-none d-md-flex mt-0">
                   <div class="publication-image-container">
                     <v-img
                         :src="publication.Cover"

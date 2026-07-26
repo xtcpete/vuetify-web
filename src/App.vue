@@ -49,16 +49,6 @@
             >
               Experience
             </v-btn>
-            <v-btn
-              class="me-2"
-              color="auto"
-              height="50"
-              width="auto"
-              variant="text"
-              @click="scrollToSection('projects')"
-            >
-              Projects
-            </v-btn>
             <v-btn icon variant="text" @click="toggleTheme">
               <v-icon>
                 {{ isDarkTheme ? 'mdi-weather-sunny' : 'mdi-weather-night' }}
@@ -85,9 +75,6 @@
         </v-list-item>
         <v-list-item @click="scrollToSection('experience')">
           <v-list-item-title>Experience</v-list-item-title>
-        </v-list-item>
-        <v-list-item @click="scrollToSection('projects')">
-          <v-list-item-title>Projects</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>

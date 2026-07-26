@@ -52,11 +52,13 @@ export const main = [
             "Contact": {
                 "Email": "gonglinc@usc.edu",
             },
-            "Highlight": "I am a second-year Ph.D. student at USC’s Vision & Graphics Lab (VGL), advised by Prof. Yajie Zhao. My research focuses on 3D vision and 3D generative modeling.",
+            "Highlight": "I am a Ph.D. student at USC’s Vision & Graphics Lab (VGL), advised by Prof. Yajie Zhao. My research focuses on 3D vision and 3D generative modeling.",
             "Links": {
                 "Github": "https://github.com/xtcpete",
                 "GoogleScholar": "https://scholar.google.com/citations?user=kY9gogcAAAAJ&hl=en",
-                "LinkedIn": "https://www.linkedin.com/in/xtcpetecgl"
+                "LinkedIn": "https://www.linkedin.com/in/xtcpetecgl",
+                "Professor": "https://www.yajie-zhao.com",
+                "Lab": "https://vgl.ict.usc.edu"
             },
             "Name": "Gonglin Chen",
             "keySkills": "Python, R, SQL, Spark, PyTorch, TensorFlow, Caffe, AWS, MongoDB, Machine Learning, Computer Vision, Feature Matching, 3D Reconstruction, 3D Vision"
@@ -192,6 +194,16 @@ export const main = [
                 "page": "https://wbteng9526.github.io/fvgen/",
                 "paper": "https://arxiv.org/abs/2508.06392",
                 "Cover" : "/fvgen.png"
+            },
+            "5": {
+                "Authors": "Junyi Ouyang; Wenbin Teng; Gonglin Chen; Yajie Zhao; Haiwei Chen",
+                "Date": "2026",
+                "Title": "DCARL: A Divide-and-Conquer Framework for Autoregressive Long-Trajectory Video Generation",
+                "Abstract": "DCARL is a divide-and-conquer autoregressive framework for stable, high-fidelity long-trajectory video generation. It combines a dedicated keyframe generator for globally consistent structural anchors with an interpolation generator that synthesizes dense frames while maintaining local coherence.",
+                "Journal": "ECCV 2026",
+                "page": "https://junyiouy.github.io/projects/dcarl/",
+                "paper": "https://arxiv.org/abs/2603.24835",
+                "Cover": "/dcarl.png"
             }
         },
         "News": {
@@ -235,6 +247,13 @@ export const main = [
                 "Title": "1 paper accepted to ICCV 2025",
                 "Description": "Our paper 'FVGen: Accelerating Novel-View Synthesis with Adversarial Video Diffusion Distillation' has been accepted to ICCV 2025.",
                 "Link": "https://wbteng9526.github.io/fvgen/",
+                "Type": "Publication"
+            },
+            "6": {
+                "Date": "July 2026",
+                "Title": "1 paper accepted to ECCV 2026",
+                "Description": "Our paper 'DCARL: A Divide-and-Conquer Framework for Autoregressive Long-Trajectory Video Generation' has been accepted to ECCV 2026.",
+                "Link": "https://junyiouy.github.io/projects/dcarl/",
                 "Type": "Publication"
             }
         }

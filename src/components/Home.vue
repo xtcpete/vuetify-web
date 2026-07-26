@@ -53,7 +53,17 @@
                 
                 <!-- Description -->
                 <v-card-text class="profile-description mt-4 text-body-1">
-                  {{ $info_data.Highlight }}
+                  I am a Ph.D. student at USC’s
+                  <a
+                    :href="$info_data.Links.Lab"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >Vision &amp; Graphics Lab (VGL)</a>, advised by
+                  <a
+                    :href="$info_data.Links.Professor"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >Prof. Yajie Zhao</a>. My research focuses on 3D vision and 3D generative modeling.
                 </v-card-text>
                 <!-- Education Section -->  
                 <v-card-text>
